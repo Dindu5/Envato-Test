@@ -9,7 +9,7 @@
 <head>
   <meta charset="utf-8" />
 
-  <title> Bakery Site - Documentation</title>
+  <title> Wedding Planner - Documentation</title>
 
   <meta name="description" content="" />
   <meta name="author" content="Team Syntax" />
@@ -164,14 +164,14 @@
   </div>
   <div id="documenter_content">
     <section id="documenter_cover">
-      <h1> Bakery Site </h1>
+      <h1> Wedding Planner </h1>
       <h2>Responsive HTML5 Template</h2>
       <div id="documenter_buttons"></div>
       <hr />
       <ul>
-        <li>created: 03/07/2020</li>
-        <li>latest update: 03/07/2020</li>
-        <li>by: teamsyntax</li>
+        <li>created: 11/07/2020</li>
+        <li>latest update: 11/07/2020</li>
+        <li>by: @Dindu</li>
 
         <li>
           email:
@@ -255,8 +255,7 @@
       <pre class="prettyprint lang-html linenums">
 - assets/
   - css/
-    - style.css                - (Main CSS file) 
-    - residence.css             - (Residence Specific CSS file) Example 
+    - styles.css                - (Main CSS file) 
     - bootstrap/bootstrap.min.css - (Bootstrap Minified CSS file)
 
 </pre>
@@ -330,15 +329,16 @@ Change here the font used
         <div>
           <pre class="prettyprint lang-css linenums">
 :root {
-  --header-font: 'Playfair Display', serif;
-  --text-font: 'Poppins', sans-serif;
-  --nav-font: 'Varela Round', sans-serif;
-  --primary-color: #4070ff;
-  --secondary-color: #5983ff;
-  --grey-color: #e0e0e0;
-  --dark-color: #333;
-  --white-color: #fff;
-}</pre>
+  --header-font: 'Cormorant Infant', serif;
+  --text-font: 'Muli', sans-serif;
+  --button-text: 'Quicksand', sans-serif;
+  --primary-color: #fc3c3c;
+  --secondary-color: #333333;
+  --text-grey: #a3a3a3;
+  --background-gray: #fafafa;
+  --white: #ffffff;
+}
+            </pre>
         </div>
       </div>
     </section>
@@ -360,7 +360,7 @@ Change here the font used
       <div>
         <p>
           We are using svg fonts which you can get more and add to
-          assets/images/icons
+          assets/images
         </p>
       </div>
     </section>
@@ -374,7 +374,7 @@ Change here the font used
         image logo
       </p>
       <pre class="prettyprint lang-html linenums">
-&lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt; &lt;img src=&quot;./assets/images/...path to your logo<span style="font-family: Arial, Verdana, sans-serif;">... path to your image logo ...</span><span style="font-family: Arial, Verdana, sans-serif;">&quot; alt=&quot;logo&quot; /&gt; &lt;/a&gt;</span>
+&lt;a class=&quot;logo&quot; href=&quot;#&quot;&gt; &lt;img src=&quot;./assets/images/...path to your logo<span style="font-family: Arial, Verdana, sans-serif;">... path to your image logo ...</span><span style="font-family: Arial, Verdana, sans-serif;">&quot; alt=&quot;logo&quot; /&gt; &lt;/a&gt;</span>
 </pre>
     </section>
     <section id="sliders">
@@ -383,8 +383,8 @@ Change here the font used
         <hr class="notop" />
       </div>
       <div>
-        Slick slider is the slider you will find in the content. It's an essay
-        to use lighweight carousel with some decent features.
+        Bootstrap Carousel is used as the default slider but in other to match the
+        design, changes and adjustments were added.
       </div>
       <div>
         &nbsp;
@@ -392,8 +392,8 @@ Change here the font used
       <div>
         <div>
           <div>
-            Estate Section slider has class &#39;sliders&#39; and each slide
-            has &#39;&lt;div class=&quot;slider-item&quot;&gt;&#39; wrapper
+            The entire page has about three &#39;sliders&#39; and each slide
+            has &#39;&lt;div class=&quot;carousel slide&quot;&gt;&#39; wrapper
             for easy find where slide html code start. If you wont remove some
             slide just remove div with all content like this &#39;&lt;div
             class=&quot;item&quot;&gt;&#39;
@@ -404,79 +404,45 @@ Change here the font used
         </div>
         <pre class="prettyprint lang-html linenums">
 &lt;!-- Sliders --&gt;
-&lt;div class=&quot;sliders&quot;&gt;
-    &lt;div class=&quot;row home-sliders&quot;&gt;
-      &lt;div class=&quot;col-md-4 slider-item&quot;&gt;
-          &lt;img src=&quot;./assets/images/sliders/house.png&quot; alt=&quot;Exclusive Apartment&quot; class=&quot;img-fluid slider-img&quot; &gt;
-          &lt;div class=&quot;slider-desc p-2 px-3&quot;&gt;
-            &lt;p class=&quot;slider-name m-0&quot;&gt;Exclusive Apartment&quot;/p&gt;
-            &lt;a href=&quot;#&quot; class=&quot;slider-link&quot;&gt;Explore &gt;&quot;/a&gt;
-          &lt;/div&gt;          
-      &lt;/div&gt;
+&lt;div id=&quot;carouselId&quot; class=&quot;carousel slide first-slide&quot; data-ride=&quot;carousel&quot;>
+  &lt;ol class=&quot;carousel-indicators position-absolute&quot;>
+    &lt;li data-target=&quot;#carouselId&quot; data-slide-to=&quot;0&quot; class=&quot;active&quot;>&lt;/li>
+    &lt;li data-target=&quot;#carouselId&quot; data-slide-to=&quot;1&quot;>&lt;/li>
+    &lt;li data-target=&quot;#carouselId&quot; data-slide-to=&quot;2&quot;>&lt;/li>
+  &lt;/ol>
+  &lt;div class=&quot;carousel-inner d-flex align-items-center&quot; role=&quot;listbox&quot;>
+    &lt;div class=&quot;carousel-item active&quot;>
+      &lt;p class=&quot;paragraph-text-slide text-white m-auto&quot;>
+        The #1 ranked. Helped over 50,000 couples around the country 
+        and we look forward to supporting you along your wedding 
+        planning journey.
+      &lt;/p>
+    &lt;/div>
+    &lt;div class=&quot;carousel-item&quot;>
+          --- Secound Carousel Content ---
+    &lt;/div>
+    &lt;div class=&quot;carousel-item&quot;>
+      &lt;div>
+          --- Third Carousel Content---
+        &lt;/p>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+  &lt;a class=&quot;carousel-control-prev&quot; href=&quot;#carouselId&quot; role=&quot;button&quot; data-slide=&quot;prev&quot;&gt;
+    &lt;i class=&quot;fa fa-arrow-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;Previous&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;a class=&quot;carousel-control-next&quot; href=&quot;#carouselId&quot; role=&quot;button&quot; data-slide=&quot;next&quot;&gt;
+    &lt;i class=&quot;fa fa-arrow-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;Next&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
 
-      &lt;div class=&quot;col-md-4 slider-item&quot;&gt;
-            ...
-      &lt;/div&gt;
-
-      &lt;div class=&quot;col-md-4 slider-item&quot;&gt;
-            ...
-      &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/section&gt;
-&lt;!-- /.Testimonial --&gt;</pre>
-        <div>
-          &nbsp;
-        </div>
-        <div>
-          If you want change option for sliders you need to open
-          assets/js/custom.js and find &#39;// Our Sliders Start&#39; function
-          and set true/false for option what you wont to change
-        </div>
-        <div>
-          &nbsp;
-        </div>
-        <div>
-          &nbsp;
-        </div>
-        <pre class="prettyprint lang-js linenums">
-// Slick Slider Configuration
-$(document).ready(function () {
-  // Homepage Sliders
-  $('.home-sliders').slick({
-    autoplaySpeed: 2000,
-    slidesToShow: 3,
-    dots: true,
-    prevArrow: $('.prev-btn'),
-    nextArrow: $('.next-btn'),
-  })
-
-  $('.residence-sliders').slick({
-    autoplaySpeed: 2000,
-    slidesToShow: 4,
-    dots: true,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: true,
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slideToScroll: 1,
-        },
-      },
-    ],
-  })
-})
-</pre>
+&lt;!-- /.Header Carousel --&gt;</pre>
       </div>
       <p>
-        You can find more documentation here&nbsp;<a href="https://kenwheeler.github.io/slick/"
-          target="_blank">https://kenwheeler.github.io/slick/</a>
+        You can find more documentation here&nbsp;<a href="https://getbootstrap.com/guide/"
+          target="_blank">https://getbootstrap.com</a>
       </p>
     </section>
     <section id="google_map">
@@ -485,39 +451,9 @@ $(document).ready(function () {
         <hr class="notop" />
       </div>
       <div>
-        The map used in the content is a google map embedded
+        Google maps were not used in this template design
       </div>
-      <div>
-        <a href="https://www.google.ng/maps">https://www.google.ng/maps</a>
-      </div>
-      <div>
-        &nbsp;
-      </div>
-      <div>
-        &nbsp;
-      </div>
-      <div>
-        change&nbsp;
-      </div>
-      <pre class="prettyprint lang-html linenums">change the src="https://www.google.com/maps/embed?pb=XXXXXXXX" url
-&lt;iframe
-	src=""
-	width="100%"
-	height="450"
-	frameborder="0"
-	style="border: 0;"
-	allowfullscreen=""
-	aria-hidden="false"
-	tabindex="0"
-&gt;&lt;/iframe&gt;
-		</pre>
-
-      <div>
-        to
-      </div>
-      <pre class="prettyprint lang-html linenums">
-          To your preferred Location
-        </pre>
+      
     </section>
     <section id="sources_and_credits">
       <div class="page-header">
