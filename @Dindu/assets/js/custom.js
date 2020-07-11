@@ -1,3 +1,8 @@
+window.addEventListener('load', function() {
+	const loader = document.querySelector('.loader');
+	loader.classList.add('done');
+	console.log('loading');
+});
 window.addEventListener('scroll', function() {
 	let menuArea = document.getElementById('navigation');
 
