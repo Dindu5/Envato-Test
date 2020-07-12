@@ -117,8 +117,8 @@
 
     </div>
   </div>
-
   <!-- End of Navbar -->
+  
   
   <!-- About Section -->
   <div id="about" class="container-fluid">
@@ -208,7 +208,7 @@
         <div class="col-4">
           <div class="service-box my-2 my-sm-3 my-md-4 my-lg-5 d-flex">
             <div class="w-30 icon-box mr-2">
-              <img src="assets/images/Checklist Icon.png" alt="">
+              <img src="assets/images/Checklist Icon.png" class="service-img">
             </div>
             
             <div class="w-60">
@@ -222,7 +222,7 @@
         <div class="col-4">
           <div class="service-box my-2 my-sm-3 my-md-4 my-lg-5 d-flex">
             <div class="w-30 icon-box mr-2">
-              <img src="assets/images/Vendor Icon.png" alt="">
+              <img src="assets/images/Vendor Icon.png" class="service-img">
             </div>
             <div class="w-60">
               <h5 class="mb-3 service-headings">Vendor Manager</h5>
@@ -261,7 +261,7 @@
         </div>
       </div>
       <div class="buttons d-flex align-contents-center justify-content-center">
-        <a href="" class="btn btn-danger mr-1">BOOK SERVICE</a>
+        <a href="#contact" class="btn btn-danger mr-1">BOOK SERVICE</a>
         <a href="#contact" class="btn btn-outline-danger ml-2">CONTACT US</a>
 
       </div>
@@ -272,16 +272,22 @@
 
   <!-- portfolio Section -->
   <div id="portfolio" class="container-fluid my-5">
+    <div class="lds-ripple position-absolute z-index-n1 mr-auto ml-auto"><div></div><div></div></div>
     <div class="pull-center">
       <h2 class="cursive text-center my-5">Real Weddings</h2>
       <h3 class="head-text text-center">OUR AMAZING WORKS</h3>
     </div>
-    <div class="row my-4 portfolio-1">
-      <div class="col-4 special">
-        <div class="box w-100">
-          <img src="assets/images/Rectangle 35.png" alt="">
+    <div class="row my-4 portfolio-1 position-relative overflow-hidden">
 
-          <div class="text-center pull-center p-2">
+      <!--<div class="lds-ripple position-absolute z-index-n1 mr-auto ml-auto"><div></div><div></div></div>-->
+
+      <div class="col-4 special z-index-1">
+        <div class="box w-100">
+          <div class="inner">
+            <img src="assets/images/Rectangle 35.png" alt="">
+          </div>
+
+          <div class="text-center pull-center bg-white p-2">
             <h6 class="portfolio-main my-3">Nicole & Micheal</h6>
             <p class="paragraph1 mb-1">South Enugu, Nigeria</p>
             <p class="paragraph1">07/07/2020</p>
@@ -290,8 +296,11 @@
       </div>
       <div class="col-4 special">
         <div class="box">
-          <img src="assets/images/Rectangle 35 (1).png" alt="">
-          <div class="text-center pull-center p-2">
+          <div class="inner">
+            <img src="assets/images/Rectangle 35 (1).png" alt="">
+          </div>
+          
+          <div class="text-center pull-center p-2 bg-white">
             <h6 class="portfolio-main my-3">Ibrahim & Aisha</h6>
             <p class="paragraph1 mb-1">Garki, Abuja, Nigeria</p>
             <p class="paragraph1">16/10/2020</p>
@@ -300,18 +309,21 @@
       </div>
       <div class="col-4 special">
         <div class="box">
-          <img src="assets/images/Rectangle 35 (2).png" alt="">
-        <div class="text-center pull-center p-2">
-          <h6 class="portfolio-main my-3">Damilare & Kemisola</h6>
-          <p class="paragraph1 mb-1">Ikeja, Lagos, Nigeria</p>
-          <p class="paragraph1">07/07/2020</p>
-        </div>
+          <div class="inner">
+            <img src="assets/images/Rectangle 35 (2).png" alt="">
+          </div>
+          
+          <div class="text-center pull-center bg-white p-2">
+            <h6 class="portfolio-main my-3">Damilare & Kemisola</h6>
+            <p class="paragraph1 mb-1">Ikeja, Lagos, Nigeria</p>
+            <p class="paragraph1">07/07/2020</p>
+          </div>
         </div>
       </div>
     </div>
     
-    <div class="d-flex mb-lg-5 mb-md-4">
-      <a href="" class="btn btn-danger ml-auto mr-auto">VIEW WEDDINGS</a>
+    <div class="d-flex mb-lg-5 z-index-2 mb-md-4">
+      <a href="" class="btn btn-danger ml-auto mr-auto z-index-2">VIEW WEDDINGS</a>
     </div>
 
     <div class="row my-5">
@@ -453,7 +465,7 @@
     <div class="parallex mt-5">
       <p class="text-center text-white parallex-one mt-5">WEDDING DRESS GALLERY</p>
       <h2 class="cursive text-center text-white pull-center parallex-two">Ready to walk down the aisle?</h2>
-      <p class="text-center text-white my-5 parallex-three"><small>DISCOVER THE LATES TRENDS IN DRESSES</small></p>
+      <p class="text-center text-white my-5 parallex-three"><small>DISCOVER THE LATEST TRENDS IN DRESSES</small></p>
     </div>
   </div>
   <!-- End of blog Section -->
