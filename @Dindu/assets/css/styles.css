@@ -12,7 +12,7 @@ body {
 }
 /* ====== Scroll Bar ========= */
 ::-webkit-scrollbar {
-	width: 10px;
+	width: 5px;
 	background-color: rgba(255, 0, 0, 0.253);
 }
 
