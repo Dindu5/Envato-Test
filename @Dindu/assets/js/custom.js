@@ -78,13 +78,15 @@ links.forEach(function(link) {
 		showMenu = false;
 	}
 });
+window.addEventListener('load', function() {
+	gsap.from('.landing', { width: '10%', duration: 3 });
+	//gsap.from('img', { x: 500, duration: 3 });
+	gsap.from('.logo', 3, { y: '-70' }, '-3');
+	gsap.from('.menu-item', 3, { height: '-70' }, '-3');
 
-gsap.from('.landing', { width: '10%', duration: 3 });
-//gsap.from('img', { x: 500, duration: 3 });
-gsap.from('#navigation', 3, { y: '-70', duration: 3 });
-gsap.from('.logo', { y: '-70' }, '-3');
-gsap.from('.sliding-area', { x: '1200', duration: 3 });
-gsap.from('.menu-btn', { y: '-70' }, '-3');
+	gsap.from('.sliding-area', { x: '1200', duration: 3 });
+	gsap.from('.menu-btn', { height: '-70' }, '-3');
 
-gsap.from('.side-text', { scrollTrigger: '.side-text', y: '-70', opacity: '0', duration: 3, delay: 3 });
-gasp.from('.box', 5, { scrollTrigger: '.box', y: '-90', opacity: 0 });
+	gsap.from('.side-text', { scrollTrigger: '.side-text', y: '-70', opacity: '0', duration: 3, delay: 3 });
+	gasp.from('.box', 5, { scrollTrigger: '.box', y: '-90', opacity: '0' });
+});
