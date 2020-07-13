@@ -1,3 +1,8 @@
+window.addEventListener('load', function() {
+	const loader = document.querySelector('.loader');
+	loader.classList.add('done');
+	console.log('loading');
+});
 window.addEventListener('scroll', function() {
 	let menuArea = document.getElementById('navigation');
 
@@ -62,16 +67,14 @@ function toggleMenu() {
 	}
 }
 
-// const links = document.querySelectorAll('link');
+const links = document.querySelectorAll('.menu-items');
 
-//let i;
-//for (i = 0; i < links.length; i++) {
-//addEventListener('click', toggleClass);
-//}
-//function toggleClass() {
-//	if ((showMenu = true)) {
-//		console.log('clicked');
-//		menu.classList.remove('close');
-//		nav.classList.remove('show');
-//	}
-//}
+links.forEach(function(link) {
+	link.addEventListener('click', close);
+	function close() {
+		console.log('I have been clicked');
+		menu.classList.remove('close');
+		nav.classList.remove('show');
+		showMenu = false;
+	}
+});
